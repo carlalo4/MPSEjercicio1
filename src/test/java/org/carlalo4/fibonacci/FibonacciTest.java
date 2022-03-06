@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Test cases:
- * fibonacci 0 -> 0
- * fibonacci 1 -> 1
+ * fibonacci 0 -> 0 *
+ * fibonacci 1 -> 1 *
  * fibonacci 2 -> 1
  * fibonacci 3 -> 2
  * fibonacci 4 -> 3
@@ -34,6 +34,12 @@ public class FibonacciTest {
 
         assertEquals(expectedValue, obtainedValue) ;
     }
+    @Test
+    public void returnOneIfTheNumberIsOne(){
+        int expectedValue = 1 ;
+        int obtainedValue = fibonacci.compute(1) ;
 
+        assertEquals(expectedValue, obtainedValue) ;
+    }
 
 }

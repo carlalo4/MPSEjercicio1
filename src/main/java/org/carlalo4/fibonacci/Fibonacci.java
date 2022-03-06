@@ -8,7 +8,7 @@ package org.carlalo4.fibonacci;
 public class Fibonacci {
 
     public int compute(int position){
-        /* undefined */
         return position;
     }
+
 }
