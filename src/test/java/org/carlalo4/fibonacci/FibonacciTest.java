@@ -10,9 +10,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Test cases:
  * fibonacci 0 -> 0 *
  * fibonacci 1 -> 1 *
- * fibonacci 2 -> 1
- * fibonacci 3 -> 2
- * fibonacci 4 -> 3
+ * fibonacci 2 -> 1 *
+ * fibonacci 3 -> 2 *
+ * fibonacci 4 -> 3 *
  */
 public class FibonacciTest {
     private Fibonacci fibonacci;
@@ -34,6 +34,7 @@ public class FibonacciTest {
 
         assertEquals(expectedValue, obtainedValue) ;
     }
+
     @Test
     public void returnOneIfTheNumberIsOne(){
         int expectedValue = 1 ;
@@ -42,4 +43,28 @@ public class FibonacciTest {
         assertEquals(expectedValue, obtainedValue) ;
     }
 
+    @Test
+    public void returnOneIfTheNumberIsTwo(){
+        int expectedValue = 1 ;
+        int obtainedValue = fibonacci.compute(2) ;
+
+        assertEquals(expectedValue, obtainedValue) ;
+    }
+
+
+    @Test
+    public void returnTwoIfTheNumberIsThree(){
+        int expectedValue = 2 ;
+        int obtainedValue = fibonacci.compute(3) ;
+
+        assertEquals(expectedValue, obtainedValue) ;
+    }
+
+    @Test
+    public void returnThreeIfTheNumberIsFour(){
+        int expectedValue = 3 ;
+        int obtainedValue = fibonacci.compute(4) ;
+
+        assertEquals(expectedValue, obtainedValue) ;
+    }
 }
