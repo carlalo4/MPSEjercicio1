@@ -8,7 +8,21 @@ package org.carlalo4.fibonacci;
 public class Fibonacci {
 
     public int compute(int position){
-        return position;
+        if(position < 0){
+            throw new RuntimeException("The position given is negative: "+ position);
+        }
+        int solution;
+
+        if (position==0) {
+            solution= 0;
+        }
+        else if (position==1 || position ==2 ){
+            solution = 1;
+        }
+        else{
+           solution = compute(position - 1) + compute(position - 2);
+        }
+        return solution;
     }
 
 }
