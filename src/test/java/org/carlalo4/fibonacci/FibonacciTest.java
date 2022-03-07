@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * fibonacci 2 -> 1 *
  * fibonacci 3 -> 2 *
  * fibonacci 4 -> 3 *
+ * fibonacci 15 -> 610 *
+ * fibonacci negative number -> raises an exception
  */
 public class FibonacciTest {
     private Fibonacci fibonacci;
@@ -64,6 +66,14 @@ public class FibonacciTest {
     public void returnThreeIfTheNumberIsFour(){
         int expectedValue = 3 ;
         int obtainedValue = fibonacci.compute(4) ;
+
+        assertEquals(expectedValue, obtainedValue) ;
+    }
+
+    @Test
+    public void return610IfTheNumberIs15(){
+        int expectedValue = 610 ;
+        int obtainedValue = fibonacci.compute(15) ;
 
         assertEquals(expectedValue, obtainedValue) ;
     }
